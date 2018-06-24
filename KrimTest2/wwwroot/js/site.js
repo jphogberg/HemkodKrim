@@ -15,3 +15,13 @@ $("#googleRadio").on("click", function() {
 $("#bingRadio").on("click", function () {
     $("#googleCollapse").removeClass("show");
 });
+
+$(document).ready(function () {
+    $(".submit-btn-search").attr("disabled", true);
+    $("#searchInput").keyup(function () {
+        if ($(this).val().length !== 0)
+            $(".submit-btn-search").attr("disabled", false);
+        else
+            $(".submit-btn-search").attr("disabled", true);
+    });
+});
