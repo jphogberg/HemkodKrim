@@ -1,37 +1,385 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
-for details on configuring this project to bundle and minify static web assets. */
+﻿/* -- Basic -- */
 body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 0.825rem;
+    overflow-y: scroll;
+    color: #414042;
+    color: rgba(65, 64, 66, 0.8);
+    margin-bottom: 45px;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.8);
 }
 
-/* Wrapping element */
-/* Set some basic padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+html {
+    position: relative;
+    min-height: 100%;
 }
 
-/* Carousel */
-.carousel-caption p {
-    font-size: 20px;
-    line-height: 1.4;
+a {
+    color: #003d58;
+    color: rgba(0, 61, 88, .9);
 }
 
-/* Make .svg files in the carousel display properly in older browsers */
-.carousel-inner .item img[src$=".svg"] {
+    a:hover {
+        color: #003d58;
+        color: rgba(0, 61, 88, .9);
+    }
+
+/* -- Search -- */
+[type=search]::-webkit-search-cancel-button {
+    -webkit-appearance: searchfield-cancel-button;
+}
+
+#googleBtn, #bingBtn {
+    padding: 6px 30px;
+    font-size: 0.85rem;
+    border-radius: 2px;
+}
+
+.search-form-control, .gsc-input-box {
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+    font-size: 0.7rem;
+    height: 34px;
+    line-height: 34px;
+    width: 199px;
+    border-radius: 2px;
+    background-color: #eee8ed;
+    background-color: rgba(238, 232, 237, 0.8);
+    border: none !important;
+    box-shadow: none;
+}
+
+.gsc-input-box {
+    height: 25px;
+    line-height: 25px;
+}
+
+.homelink {
+    font-size: 0.7rem;
+}
+
+.search-form-control:active, .search-form-control:focus, .search-form-control:hover {
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.d-search {
+    background-color: #fff;
+    background-color: rgba(255,255,255, 0.8);
+    margin: 0 auto;
+    height: 34px;
+    width: 240px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    vertical-align: top;
+    border-radius: 2px;
+    box-shadow: 0 2px 2px 0 #000000, 0 0 0 1px #000000;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+    .d-search:active, .d-search:focus, .d-search:hover {
+        box-shadow: 0 3px 8px 0 #000000, 0 0 0 1px #000000;
+        box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08);
+    }
+
+    .d-search.top {
+        margin: 0 1px;
+    }
+
+.sb-icon {
+    display: inline-block;
+    height: 34px;
+    background: #fff;
+    background: rgba(255,255,255,0.8);
+    padding: 0 20px 0 0;
+    color: #003d58;
+    color: rgba(0, 61, 88, .9);
+    font-size: 1.1rem;
+    border: none;
+}
+
+.logo-top {
+    height: 34px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.logo-top-sm {
+    height: 60px;
+    width: auto;
+    vertical-align: top;
+    margin: 0 auto;
+    display: block;
+}
+
+.searchButtons {
+    width: 240px;
+}
+
+.bcs-result cite {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+/* -- Footer -- */
+footer {
+    position: absolute;
+    bottom: 0;
     width: 100%;
+    height: 45px;
+    line-height: 45px;
+    overflow-y: hidden;
+    text-align: center;
+    border-top: 1px solid #e4e4e4;
+    background-color: #f5f5f5;
 }
 
-/* QR code generator */
-#qrCode {
-    margin: 15px;
+/* -- Page -- */
+.img-center {
+    display: block;
+    margin: 10px auto;
 }
 
-/* Hide/rearrange for smaller screens */
-@media screen and (max-width: 767px) {
-    /* Hide captions */
-    .carousel-caption {
-        display: none;
+.img-krim {
+    height: 44px;
+    width: auto;
+}
+
+#mainContent {
+    background: #fff;
+    background: rgb(255, 255, 255);
+    padding: 16px;
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 50%;
+    resize: both;
+}
+
+/* -- MDI Overrides -- */
+.mdi-magnify {
+    font-size: 1.3rem;
+}
+
+/* -- Google CSE Overrides -- */
+.cse .gsc-search-button-v2, .gsc-search-button-v2 {
+    background-color: #195068 !important;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#195068),to(#195068)) !important;
+    background-image: -webkit-linear-gradient(top,#195068,#195068) !important;
+    background-image: -moz-linear-gradient(top,#195068,#195068) !important;
+    background-image: -ms-linear-gradient(top,#195068,#195068) !important;
+    background-image: -o-linear-gradient(top,#195068,#195068) !important;
+    background-image: linear-gradient(top,#195068,#195068) !important;
+    border: none !important;
+    font-size: 1rem !important;
+    padding: 6px 10px !important;
+}
+
+.gsib_a {
+    padding: 0.375rem 0.75rem !important;
+}
+
+input.gsc-input {
+    font-size: 0.85rem !important;
+}
+
+/* -- Bootstrap Overrides -- */
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #195068;
+}
+
+.navbar-brand {
+    margin-right: 0;
+}
+
+.navbar {
+    margin: 0 auto;
+}
+
+.form-control {
+    background: #fff;
+    background: rgba(255,255,255, 0.8);
+}
+
+.btn-primary {
+    background-color: #003d58;
+    background-color: rgba(0, 61, 88, .9);
+    border-color: #003d58;
+    border-color: rgba(0, 61, 88, .9);
+}
+
+    .btn-primary:disabled {
+        background-color: #003d58;
+        background-color: rgba(0, 61, 88, .9);
+        border-color: #003d58;
+        border-color: rgba(0, 61, 88, .9);
+    }
+
+    .btn-primary:hover {
+        background-color: #195068;
+        background-color: rgba(25, 80, 104, .9);
+        border-color: #003d58;
+        border-color: rgba(0, 61, 88, .9);
+        border-left: 1px solid #003d58;
+        border-left: 1px solid rgba(0, 61, 88, .9);
+    }
+
+/* -- Nav -- */
+.bg-nav-color-searchtop {
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid #e3d9e2;
+    border-bottom: 1px solid rgba(227, 217, 226, 0.8);
+    height: 75px;
+}
+
+/* --- Responsiv --- */
+/* --- Mobiltelefon/SM --- */
+@media (min-width: 568px) {
+    .d-search {
+        width: 304px;
+    }
+
+    .searchButtons {
+        width: 304px;
+    }
+
+    .search-form-control, .gsc-input-box {
+        width: 263px;
+    }
+}
+
+/* --- Surfplatta/MD --- */
+@media (min-width: 768px) {
+    .ds-main {
+        width: 100%;
+    }
+
+    .sfc-main {
+        width: 89%;
+    }
+
+    .ds-top {
+        width: 374px;
+    }
+
+    .d-search.top {
+        margin: 0 5px;
+    }
+
+    .sfc-top {
+        width: 333px;
+    }
+
+    .img-krim {
+        height: 74px;
+    }
+}
+
+/* --- Dataskärm / LG --- */
+@media (min-width: 992px) {
+    .img-krim {
+        height: 104px;
+    }
+
+    .d-search.top {
+        margin: 0 10px;
+    }
+
+    .d-search {
+        width: 504px;
+        height: 44px;
+    }
+
+    .searchButtons {
+        width: 504px;
+    }
+
+    .search-form-control, .gsc-input-box {
+        width: 463px;
+        height: 44px;
+        font-size: 0.85rem;
+    }
+
+    .sb-icon {
+        height: 44px;
+    }
+
+    .logo-top {
+        height: 44px;
+        margin: 0;
+    }
+
+    .cse .gsc-search-button-v2, .gsc-search-button-v2 {
+        padding: 10px 15px !important;
+    }
+}
+
+/* --- Dataskärm/XL --- */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+
+    .d-search.top {
+        margin: 0 10px;
+    }
+
+    .d-search {
+        width: 532px;
+    }
+
+    .searchButtons {
+        width: 532px;
+    }
+
+    .search-form-control, .gsc-input-box {
+        width: 491px;
+    }
+}
+
+
+/* --- Dataskärm/XXL --- */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 90%;
+    }
+
+    .d-search.top {
+        margin: 0 15px;
+    }
+
+    .d-search {
+        width: 632px;
+    }
+
+    .searchButtons {
+        width: 632px;
+    }
+
+    .search-form-control, .gsc-input-box {
+        width: 591px;
+    }
+}
+
+/* --- Dataskärm/XXXL --- */
+@media (min-width: 1900px) {
+    .container {
+        max-width: 1610px;
+    }
+
+    .d-search.top {
+        margin: 0 10px;
+    }
+    
+    .search-form-control, .gsc-input-box {
+        width: 591px;
     }
 }

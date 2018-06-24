@@ -1,4 +1,17 @@
-﻿// Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿(function () {
+    var cx = '001787165001180363838:liud3rsaha0';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+})();
 
-// Write your JavaScript code.
+$("#googleRadio").on("click", function() {
+    $("#bingCollapse").removeClass("show");
+});
+
+$("#bingRadio").on("click", function () {
+    $("#googleCollapse").removeClass("show");
+});

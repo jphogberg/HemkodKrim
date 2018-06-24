@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["Title"] = ViewBag.SearchString;
+    Layout = "_SearchLayoutBing";
+}
+
+<div class="container" id="bingSearch">
+    <script type="text/javascript"
+            id="bcs_js_snippet"
+            src="https://ui.customsearch.ai/api/ux/render?customConfig=2394736495&market=en-US&safeSearch=Moderate&q=@ViewBag.SearchString">
+    </script>
+</div>

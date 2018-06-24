@@ -1,0 +1,18 @@
+﻿<div class="d-md-none">
+    <a href="/"><img src="~/images/logo.png" alt="logo.png" class="logo-top-sm img-fluid" title="Kriminalvården" asp-append-version="true" /></a>
+</div>
+<nav class="navbar navbar-expand navbar-dark bg-nav-color-searchtop py-sm-0">
+    <a class="navbar-brand d-none d-md-block" href="/"><img src="~/images/logo.png" alt="logo.png" class="logo-top" title="Kriminalvården" asp-append-version="true" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#responsiveMenu" aria-controls="responsiveMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="mdi mdi-menu"></span>
+    </button>
+
+    <div class="navbar-collapse collapse ml-auto" id="responsiveMenu">
+        <div class="d-search top ds-top">
+            <gcse:searchbox-only></gcse:searchbox-only>
+        </div>
+    </div>
+    <div class="ml-auto text-right homelink">
+        <a asp-action="BingSearch" asp-route-q="@ViewBag.SearchString">Byt till Bing</a>
+    </div>
+</nav>
